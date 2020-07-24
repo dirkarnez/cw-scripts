@@ -1,6 +1,49 @@
-docker run --rm -d -p 8088:8080 --name superset preset/superset
-docker cp superset_config.py superset:/app/pythonpath
-docker exec -it superset superset fab create-admin --username admin --firstname Superset --lastname Admin --email admin@superset.com --password admin
-docker exec -it superset superset db upgrade
-docker exec -it superset superset load_examples
-docker exec -it superset superset init
+{
+	"name": "mariadb", 
+	"commands": [
+        {
+            "command": "docker run --rm -d -p %1%:8080 --name superset preset/superset",
+            "parameters": [
+                {
+                    "default": 8088,
+                    "displayName": "port",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "command": "docker cp %1% superset:/app/pythonpath",
+            "parameters": [
+                {
+                    "default": "{{SCRIPT_LOCATION}}/superset_config.py",
+                    "displayName": "superset_config.py path",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "command": "docker exec -it superset superset fab create-admin --username %1% --firstname Superset --lastname Admin --email admin@superset.com --password %2%",
+            "parameters": [
+                {
+                    "default": "admin",
+                    "displayName": "username",
+                    "description": ""
+                },
+                {
+                    "default": "admin",
+                    "displayName": "password",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "command": "docker exec -it superset superset db upgrade"
+        },
+        {
+            "command": "docker exec -it superset superset load_examples"
+        },
+        {
+            "command": "docker exec -it superset superset init"
+        }
+    ]
+}
