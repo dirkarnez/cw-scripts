@@ -1,5 +1,5 @@
 {
-	"name": "mariadb", 
+	"name": "superset", 
 	"commands": [
         {
             "command": "docker run --rm -d -p %1%:8080 --name superset preset/superset",
