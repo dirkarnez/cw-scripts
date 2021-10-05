@@ -1,0 +1,2 @@
+- templated file
+- redirected file (std)
