@@ -1,3 +1,3 @@
 read from file
-- code snippets
+- code snippets (with direction / reference to some snippet repository)
 - secret strings like token / pw (.gitignore)
