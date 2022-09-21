@@ -8,3 +8,6 @@ The repository for [Command Wrapper](https://github.com/dirkarnez/cw) scripts.
 
 ### TODOs
 - [ ] Tags
+
+### Reference
+- [CW-Khristos/scripts: CW Admin Scripts](https://github.com/CW-Khristos/scripts)
