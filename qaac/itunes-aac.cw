@@ -1,4 +1,8 @@
 @echo off 
+@REM iTunes' standard setting is identical to Quicktime's ABR setting at medium encoding quality.
+@REM iTunes' VBR setting is identical to Quicktime's VBR constrained setting at medium encoding quality.
+@REM iTunes Plus is identical to Quicktime's VBR constrained 256kbit/s setting at maximum encoding quality.
+@REM https://hydrogenaud.io/index.php/topic,70405.0.html
 @REM Quicktime's VBR constrained 256kbit/s setting at maximum encoding quality.
 @REM set PATH=%USERPROFILE%\Downloads\iTunes 12.4.1.6 Portable\App\Common\AppleApplicationSupport64
 @REM set PATH=%USERPROFILE%\Downloads\itunes-portable-v12.12.6.1
